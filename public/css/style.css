@@ -12,22 +12,101 @@ body {
   width: 1366px;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   color: #223444;
 }
 .navbar {
   max-height: 94px;
+  padding-top: 65px;
+  margin-bottom: 9px;
+}
+.navbar-nav {
+  gap: 50px;
 }
 .navbar-brand > img {
   width: 117px;
   height: 85px;
+  margin-left: -30px;
+  margin-right: 74px;
 }
 .nav-item > a {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 23px;
   line-height: 20px;
 }
-.user > button {
-  border: unset;
+.nav-item {
+  padding-top: 14px;
+}
+.user {
+  border: none;
+  margin-top: -8px;
+}
+.user > img {
+  width: 54px;
+  height: 54px;
+}
+.nav-link.language {
+  border: solid 1px;
+  width: 132px;
+  height: 32px;
+  border-radius: 16px;
+  align-items: center;
+  filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.1));
+}
+.nav-item.sign-up {
+  margin-top: -8px;
+}
+.nav-link.sign-up {
+  background: #1777e8;
+  border-radius: 22px;
+  font-weight: 700;
+  font-size: 24px;
+  width: 160px;
+  height: 50px;
+  text-align: center;
+  padding-top: 13px;
+  color: #ffffff;
+}
+.thumbnail > img {
+  width: 850px;
+  height: 800px;
+  right: 456px;
+  top: 104px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px -200px 220px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+.thumbnail {
+  position: relative;
+}
+.title {
+  position: absolute;
+  top: 528px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 60px;
+  width: 791px;
+  height: 125px;
+  padding-left: 26px;
+}
+.describe {
+  position: absolute;
+  width: 820px;
+  height: 165px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  top: 678px;
+  padding-left: 26px;
+  align-items: center;
+  text-align: justify;
 }
