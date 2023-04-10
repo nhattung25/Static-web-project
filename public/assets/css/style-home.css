@@ -1,5 +1,5 @@
 .banner {
-  background-image: url(/public/img/banner/banner-3.jpg);
+  background-image: url(/public/img/back-ground/banner-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: inset 0px -400px 280px rgba(0, 0, 0, 0.564);
@@ -132,9 +132,7 @@
   position: relative;
   cursor: pointer;
 }
-/* .card-thumbnail img {
-  height: 220px;
-} */
+
 .card-name {
   font-weight: 600;
   font-size: 18px;
@@ -375,7 +373,7 @@
 
 /* Testimotional CSS */
 .testimo-section {
-  background-image: url(/public/img/back-ground/back-ground-2.jpg);
+  background-image: url(/public/img/back-ground/home-page-bg.jpg);
   box-shadow: inset 0px -400px 250px rgba(0, 0, 0, 0.462);
   margin-bottom: 50px;
   border-radius: 5px;
