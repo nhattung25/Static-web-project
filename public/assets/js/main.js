@@ -3,7 +3,7 @@ const swiper = new Swiper(".swiper", {
   direction: "vertical",
   loop: false,
   speed: 700,
-  slidesPerView: 2,
+  slidesPerView: 3,
   spaceBetween: 15,
   // If we need pagination
   pagination: {
@@ -29,6 +29,28 @@ const sign_up_crt = document.querySelector(".sign-up-fnc.crt");
 sign_up_btn.addEventListener("click", function () {
   sign_up.style.display = "block";
 });
+
+function handleClickbtn(e) {
+  e.target.innerHTML = `<div class="back">
+      <div class="back-title">Bước 1/2</div>
+    </div>
+    <div class="alert-title">TẠO TÀI KHOẢN</div>
+    <div class="sign-up-alert-form">
+      <div class="sign-up-acc">
+        <div class="sign-up-label">Tài khoản</div>
+        <input class="input sign-up" type="text" />
+      </div>
+      <div class="sign-up-pass">
+        <div class="sign-up-label">Mật khẩu</div>
+        <input class="input sign-up" type="password" />
+      </div>
+      <div class="sign-up-pass">
+        <div class="sign-up-label">Nhập lại mật khẩu</div>
+        <input class="input sign-up" type="password" />
+      </div>
+        <input class="submit-btn" type="submit" value="Tiếp" /> 
+    </div>`;
+}
 sign_up_crt.addEventListener("click", function () {
   sign_up_alert.innerHTML = `<div class="back">
       <div class="back-title">Bước 1/2</div>
@@ -49,6 +71,7 @@ sign_up_crt.addEventListener("click", function () {
       </div>
         <input class="submit-btn" type="submit" value="Tiếp" /> 
     </div>`;
+
   const next_btn = document.querySelector(".submit-btn");
   next_btn.addEventListener("click", function () {
     sign_up_alert.innerHTML = `  <div class="back">
