@@ -26,7 +26,7 @@
   text-align: center !important;
   letter-spacing: 0.01em;
   color: white;
-  background-image: url("/public/img/back-ground/about-bg.jpg");
+  background-image: url("../back-ground/about-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }

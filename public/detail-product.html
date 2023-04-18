@@ -21,14 +21,26 @@
     <!-- Import Bootstrap -->
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css" />
 
+    <!-- Import Owlcarosel -->
+    <link
+      rel="stylesheet"
+      href="./lib/owl-carosel/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./lib/owl-carosel/assets/owl.theme.default.min.css"
+    />
+
     <!-- Import Base css file -->
     <link rel="stylesheet" href="./assets/css/style-base.css" />
+    <!-- Import Homepage css file -->
+    <link rel="stylesheet" href="./assets/css/style-home.css" />
+    <link rel="stylesheet" href="./assets/css/style-detail-product.css" />
   </head>
-  <!-- Import about-css -->
-  <link rel="stylesheet" href="./assets/css/style-contact.css" />
+
   <body>
     <!-- Header - Navigation bar -->
-    <header>
+    <div class="nav-container">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <button
@@ -58,7 +70,10 @@
 
             <ul class="navbar-nav">
               <li class="nav-item border-bottom py-2">
-                <a class="nav-link" aria-current="page" href="./index.html"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -132,7 +147,7 @@
                 >
               </li>
               <li class="nav-item border-bottom py-2">
-                <a class="nav-link active" href="./contact.html"
+                <a class="nav-link" href="./contact.html"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -157,7 +172,10 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./index.html"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
                   >TRANG CHỦ</a
                 >
               </li>
@@ -171,7 +189,7 @@
                 <a class="nav-link" href="./about.html">GIỚI THIỆU</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./contact.html">LIÊN HỆ</a>
+                <a class="nav-link" href="./contact.html">LIÊN HỆ</a>
               </li>
             </ul>
           </div>
@@ -193,6 +211,7 @@
                 />
               </svg>
             </a>
+
             <a class="nav-link" href="./shopping-cart.html"
               ><div class="shopping-cart">
                 <svg
@@ -211,14 +230,21 @@
           </div>
         </div>
       </nav>
-    </header>
+    </div>
 
-    <div class="content">
-      <!-- Hot post, Seach bar and filted post -->
-
-      <div class="contact-title">LIÊN HỆ</div>
-      <!-- Sign up-button -->
+    <div class="main-content">
       <section>
+        <div class="product-title">
+          <div class="container product-title">
+            <span>CHI TIẾT SẢN PHẨM</span>
+            <div class="title-bg">
+              <img src="./assets/back-ground/title-bg1.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sign up-button -->
+      <div class="sign">
         <div class="sign-up-button">
           <div class="sign-up-alert">
             <img src="./img/logo-brand/logo-brand.png" alt="" />
@@ -247,131 +273,349 @@
                 <span>Tạo tài khoản trên Catpaw</span>
               </button>
             </div>
+          </div>
+          <div class="close-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0.486446 0.528263C0.798309 0.217445 1.22108 0.0428596 1.66187 0.0428596C2.10265 0.0428596 2.5254 0.217445 2.83728 0.528263L9.97851 7.65419L17.1197 0.528263C17.2721 0.365186 17.4557 0.234397 17.6598 0.143685C17.8638 0.0529733 18.084 0.00419831 18.3074 0.000259135C18.5307 -0.00368004 18.7525 0.0373274 18.9596 0.120802C19.1667 0.204278 19.3548 0.328516 19.5127 0.486127C19.6708 0.643739 19.7953 0.831492 19.8789 1.03814C19.9625 1.24482 20.0037 1.46619 19.9997 1.68904C19.9957 1.91191 19.947 2.13168 19.856 2.33528C19.7651 2.53888 19.634 2.72212 19.4706 2.87406L12.3293 9.99999L19.4706 17.1259C19.634 17.2779 19.7651 17.4612 19.856 17.6648C19.947 17.8684 19.9957 18.0881 19.9997 18.311C20.0037 18.5338 19.9625 18.7551 19.8789 18.9618C19.7953 19.1685 19.6708 19.3562 19.5127 19.5138C19.3548 19.6715 19.1667 19.7957 18.9596 19.8791C18.7525 19.9626 18.5307 20.0037 18.3074 19.9997C18.084 19.9958 17.8638 19.9471 17.6598 19.8563C17.4557 19.7656 17.2721 19.6348 17.1197 19.4717L9.97851 12.3458L2.83728 19.4717C2.52196 19.7649 2.10491 19.9245 1.674 19.917C1.24308 19.9092 0.831953 19.7351 0.527187 19.431C0.222442 19.1269 0.0478819 18.7166 0.040275 18.2866C0.032668 17.8566 0.192636 17.4406 0.486446 17.1259L7.62767 9.99999L0.486446 2.87406C0.17496 2.56287 0 2.141 0 1.70116C0 1.26133 0.17496 0.83948 0.486446 0.528263Z"
+                fill="#57606A"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
 
-            <div class="close-btn sign-up-btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M0.486446 0.528263C0.798309 0.217445 1.22108 0.0428596 1.66187 0.0428596C2.10265 0.0428596 2.5254 0.217445 2.83728 0.528263L9.97851 7.65419L17.1197 0.528263C17.2721 0.365186 17.4557 0.234397 17.6598 0.143685C17.8638 0.0529733 18.084 0.00419831 18.3074 0.000259135C18.5307 -0.00368004 18.7525 0.0373274 18.9596 0.120802C19.1667 0.204278 19.3548 0.328516 19.5127 0.486127C19.6708 0.643739 19.7953 0.831492 19.8789 1.03814C19.9625 1.24482 20.0037 1.46619 19.9997 1.68904C19.9957 1.91191 19.947 2.13168 19.856 2.33528C19.7651 2.53888 19.634 2.72212 19.4706 2.87406L12.3293 9.99999L19.4706 17.1259C19.634 17.2779 19.7651 17.4612 19.856 17.6648C19.947 17.8684 19.9957 18.0881 19.9997 18.311C20.0037 18.5338 19.9625 18.7551 19.8789 18.9618C19.7953 19.1685 19.6708 19.3562 19.5127 19.5138C19.3548 19.6715 19.1667 19.7957 18.9596 19.8791C18.7525 19.9626 18.5307 20.0037 18.3074 19.9997C18.084 19.9958 17.8638 19.9471 17.6598 19.8563C17.4557 19.7656 17.2721 19.6348 17.1197 19.4717L9.97851 12.3458L2.83728 19.4717C2.52196 19.7649 2.10491 19.9245 1.674 19.917C1.24308 19.9092 0.831953 19.7351 0.527187 19.431C0.222442 19.1269 0.0478819 18.7166 0.040275 18.2866C0.032668 17.8566 0.192636 17.4406 0.486446 17.1259L7.62767 9.99999L0.486446 2.87406C0.17496 2.56287 0 2.141 0 1.70116C0 1.26133 0.17496 0.83948 0.486446 0.528263Z"
-                  fill="#57606A"
-                />
-              </svg>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-4">
+              <img class="product-img" src="./img/cat-thumbnail/1.jpg" alt="" />
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="product-info">
+                <div class="product-name">Mèo Anh lông ngắn Silver</div>
+                <div class="product-price">15.000.000đ</div>
+                <div class="short-des">
+                  Mèo Anh lông ngắn Silver xuất sứ Thái Lan. Đã tiêm phòng và có
+                  chứng từ đầy đủ
+                </div>
+                <div class="product-qty">
+                  <span>Số lượng:</span>
+                  <button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      fill="currentColor"
+                      class="bi bi-dash-square-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm2.5 7.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1z"
+                      />
+                    </svg>
+                  </button>
+                  <input type="text" />
+                  <button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      fill="currentColor"
+                      class="bi bi-plus-square-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="card-meta">
+                  <div class="card-rate">
+                    4<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                      />
+                    </svg>
+                  </div>
+                  <div class="card-sale">8 lượt mua</div>
+                </div>
+                <div class="buy">
+                  <button class="buy-btn">Thêm vào giỏ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  href="#home"
+                  >Giới thiệu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  href="#profile"
+                  >Ưu đãi-Bảo hành</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  role="tab"
+                  data-bs-toggle="tab"
+                  href="#contact"
+                  >Đánh giá và nhận xét</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+              <div class="container">
+                <div class="col-12 new-product">
+                  Mèo Anh lông ngắn là giống mèo dễ chăm sóc. Chúng không có vấn
+                  đề sức khỏe bẩm sinh, không có yêu cầu chế độ ăn uống đặc biệt
+                  và là vật nuôi vui vẻ, hòa đồng. Chúng khỏe mạnh, thông minh,
+                  tình cảm và là những con mèo nhà lý tưởng.
+                  <p>
+                    Mèo Anh lông ngắn trưởng thành thường nặng từ 11 – 15 pound
+                    đối với con đực và 8 – 12 pound đối với con cái. Sẽ không
+                    mất nhiều thời gian để giữ cho mèo hoặc mèo con của bạn hạnh
+                    phúc – rất nhiều tình yêu thương, thức ăn ngon, nước sạch,
+                    môi trường an toàn và chăm sóc sức khỏe tốt.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">
+              <div class="container">
+                Trả góp LS 0% trong 12 tháng (Chi tiết) Bảo hành lên tới 365
+                ngày. Bảo hiểm sức khỏe lên tới 1,000,000đ Miễn phí vận chuyển
+                toàn quốc (Chi tiết) Giảm 500,000đ khi mua bé thứ 2. Giảm trọn
+                đời 5% khi mua phụ kiện. Giảm trọn đời 20% Spa cắt tỉa – Áp dụng
+                với KH khu vực Hà Nội.
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="contact">
+              <div class="container">
+                <div class="comment-title">Để lại đánh giá và nhận xét của bạn về sản phẩm</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Contact -->
-
-      <div class="container">
-        <div class="row my-4">
-          <div class="col-12 col-md-6 contact-alert-content">
-            <div class="contact-alert-des">
-              Catpaw muốn được nghe ý kiến từ quý khách. Nếu có bất kỳ thông tin
-              gì cần giải đáp, vui lòng gửi tin nhắn và để lại thông tin liên hệ
-              cho Catpaw. Catpaw sẽ cố gắng phản hồi và liên hệ với quý khách.
-            </div>
-
-            <div class="contact-info">
-              <div class="label-2">Liên hệ với CATPAW tại địa chỉ:</div>
-              <div class="address">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-geo-alt-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
-                  />
-                </svg>
-                <span>Nam Từ Liêm, Hà Nội</span>
-              </div>
-              <div class="email">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-envelope-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
-                  />
-                </svg>
-                <a href="mailto: nhattung725@gmail.com"
-                  >nhattung725@gmail.com</a
-                >
-              </div>
-              <div class="phone">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-telephone-fill"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
-                  />
-                </svg>
-                <a href="tel:+0886-308-073">0886-308-073</a>
-              </div>
-            </div>
-            <div class="contact-alert-form">
-              <div class="label-2">
-                Hoặc để lại lời nhắn cho CATPAW theo thông tin dưới đây:
-              </div>
-              <div class="contact-name">
-                <div class="label">Tên</div>
-                <input class="input" type="text" />
-              </div>
-              <div class="contact-email">
-                <div class="label">Email</div>
-                <input class="input" type="email" />
-              </div>
-              <div class="contact-mess">
-                <div class="label">Lời nhắn</div>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-              </div>
-              <div class="container">
-                <div class="col-12 d-flex my-2 justify-content-end">
-                  <input class="submit-btn" type="submit" value="GỬI" />
+      <!-- Sản phẩm khác -->
+      <section>
+        <div class="container section-title">
+          <div class="section-num"></div>
+          <span>SẢN PHẨM KHÁC</span>
+        </div>
+        <div class="container">
+          <div class="new-product">
+            <div class="owl-2 owl-carousel owl-theme">
+              <a href="./detail-product.html">
+                <div class="item-card">
+                  <div class="item-content">
+                    <div class="card-thumbnail">
+                      <img src="./img/cat-thumbnail/8.jpg" alt="" />
+                    </div>
+                    <div class="card-content">
+                      <div class="card-name">Munchkin Xanh Xám</div>
+                      <div class="card-price">19.700.000 ₫</div>
+                      <div class="card-meta">
+                        <div class="card-rate">
+                          4.3<svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                        </div>
+                        <div class="card-sale">8 lượt mua</div>
+                      </div>
+                    </div>
+                    <div class="buy">
+                      <button class="buy-btn">Thêm vào giỏ</button>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </a>
+              <a href="./detail-product.html">
+                <div class="item-card">
+                  <div class="item-content">
+                    <div class="card-thumbnail">
+                      <img src="./img/food-thumbnail/5.jpg" alt="" />
+                    </div>
+                    <div class="card-content">
+                      <div class="card-name">Me-O Adult Hải sản 1.2kg</div>
+                      <div class="card-price">120.000 đ</div>
+                      <div class="card-meta">
+                        <div class="card-rate">
+                          4.2<svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                        </div>
+                        <div class="card-sale">69 lượt mua</div>
+                      </div>
+                    </div>
+                    <div class="buy">
+                      <button class="buy-btn">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="./detail-product.html">
+                <div class="item-card">
+                  <div class="item-content">
+                    <div class="card-thumbnail">
+                      <img src="./img/food-thumbnail/10.jpg" alt="" />
+                    </div>
+                    <div class="card-content">
+                      <div class="card-name">Zenith Cat 1.2kg</div>
+                      <div class="card-price">220.000 ₫</div>
+                      <div class="card-meta">
+                        <div class="card-rate">
+                          4.1<svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                        </div>
+                        <div class="card-sale">8 lượt mua</div>
+                      </div>
+                    </div>
+                    <div class="buy">
+                      <button class="buy-btn">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="./detail-product.html">
+                <div class="item-card">
+                  <div class="item-content">
+                    <div class="card-thumbnail">
+                      <img src="./img/food-thumbnail/9.jpg" alt="" />
+                    </div>
+                    <div class="card-content">
+                      <div class="card-name">Whiskas Adult Cá thu 1.2kg</div>
+                      <div class="card-price">115.000 ₫</div>
+                      <div class="card-meta">
+                        <div class="card-rate">
+                          4.2<svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                        </div>
+                        <div class="card-sale">56 lượt mua</div>
+                      </div>
+                    </div>
+                    <div class="buy">
+                      <button class="buy-btn">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="./detail-product.html">
+                <div class="item-card">
+                  <div class="item-content">
+                    <div class="card-thumbnail">
+                      <img src="./img/accessories-thumbnail/5.jpg" alt="" />
+                    </div>
+                    <div class="card-content">
+                      <div class="card-name">Cần câu mèo</div>
+                      <div class="card-price">115.000 ₫</div>
+                      <div class="card-meta">
+                        <div class="card-rate">
+                          4.2<svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-star-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                            />
+                          </svg>
+                        </div>
+                        <div class="card-sale">56 lượt mua</div>
+                      </div>
+                    </div>
+                    <div class="buy">
+                      <button class="buy-btn">Thêm vào giỏ</button>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
-          </div>
-          <div class="col-12 col-md-6 contact-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7448.608504107532!2d105.7763939451385!3d21.020508757480027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454ac07228aff%3A0xce3f8e359e6e2a28!2zxJDDrG5oIFRow7RuLCBNeSBEaW5oIDIsIFThu6sgTGnDqm0sIEhhbm9pLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1679590700243!5m2!1sen!2s"
-              width="550"
-              height="550"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
           </div>
         </div>
-      </div>
+      </section>
     </div>
 
+    <!-- Footer -->
     <footer>
       <div class="container">
         <div class="row d-flex justify-content-center gap-5">
-          <div class="col-12 col-md-3 contact">
+          <div class="col-12 col-sm-6 col-md-3 contact">
             <div class="footer-title">THÔNG TIN LIÊN HỆ</div>
             <div class="contact-info">
               <div class="address">
@@ -424,7 +668,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-3 term">
+          <div class="col-12 col-sm-6 col-md-3 term">
             <div class="footer-title">CHÍNH SÁCH</div>
             <a href="">Chính sách bảo hành</a>
             <a href="">Chính sách vận chuyển</a>
@@ -898,9 +1142,14 @@
 
     <!-- Import Jquery js -->
     <script src="./lib/jquery/jquery-3.6.4.min.js"></script>
+    <!-- Import Owlcarosel js -->
+    <script src="./lib/owl-carosel/owl.carousel.min.js"></script>
+    <!-- Import Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- Import Boostrap js -->
     <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Import js file -->
-    <script type="module" src="./assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/home-page.js"></script>
   </body>
 </html>

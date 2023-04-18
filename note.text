@@ -4,3 +4,347 @@
 -Tạo API
 
 1.
+
+{
+  "cats": [
+    {
+      "id": 1,
+      "name": "Mèo Anh lông ngắn Silver",
+      "price": "15.000.000 VNĐ",
+      "quantity": 10,
+      "rate": 4,
+      "image": "/img/cat-thumbnail/1.jpg",
+      "sale": 8
+    },
+    {
+      "id": 2,
+      "name": "Mèo Anh lông ngắn Xanh Xám",
+      "price": "14.500.000",
+      "quantity": 9,
+      "rate": 4.5,
+      "image": "/img/cat-thumbnail/2.jpg",
+      "sale": 3
+    },
+    {
+      "id": 3,
+      "name": "Mèo Anh lông ngắn Bicolor",
+      "price": "16.500.000",
+      "quantity": 9,
+      "rate": 4.7,
+      "image": "/img/cat-thumbnail/3.jpg",
+      "sale": 5
+    },
+    {
+      "id": 4,
+      "name": "Mèo Anh lông ngắn Black Gold",
+      "price": "17.500.000",
+      "quantity": 9,
+      "rate": 4.3,
+      "image": "/img/cat-thumbnail/4.jpg",
+      "sale": 5
+    },
+    {
+      "id": 5,
+      "name": "Mèo Anh lông ngắn Xanh Xám",
+      "price": "13.600.000",
+      "quantity": 2,
+      "rate": 4.1,
+      "image": "/img/cat-thumbnail/5.jpg",
+      "sale": 7
+    },
+    {
+      "id": 6,
+      "name": "Mèo Anh lông ngắn Tabi",
+      "price": "16.200.000",
+      "quantity": 2,
+      "rate": 4.8,
+      "image": "/img/cat-thumbnail/6.jpg",
+      "sale": 1
+    },
+    {
+      "id": 7,
+      "name": "Munchkin Bicolor",
+      "price": "20.200.000",
+      "quantity": 2,
+      "rate": 4.8,
+      "image": "/img/cat-thumbnail/7.jpg",
+      "sale": 2
+    },
+    {
+      "id": 8,
+      "name": "Munchkin Xanh Xám",
+      "price": "19.700.000",
+      "quantity": 4,
+      "rate": 4.3,
+      "image": "/img/cat-thumbnail/8.jpg",
+      "sale": 5
+    },
+    {
+      "id": 9,
+      "name": "Scottish Tabi",
+      "price": "19.100.000",
+      "quantity": 4,
+      "rate": 5,
+      "image": "/img/cat-thumbnail/9.jpg",
+      "sale": 2
+    },
+    {
+      "id": 10,
+      "name": "Scottish Bicolor",
+      "price": "19.300.000",
+      "quantity": 2,
+      "rate": 4.9,
+      "image": "/img/cat-thumbnail/10.jpg",
+      "sale": 2
+    }
+  ],
+  "food": [
+    {
+      "id": 1,
+      "name": "Maxim Cá hồi 400g",
+      "price": "40.000 VNĐ",
+      "quantity": 10,
+      "rate": 4,
+      "image": "/img/food-thumbnail/1.jpg",
+      "sale": 58
+    },
+    {
+      "id": 2,
+      "name": "Maxim Cá ngừ 1.2kg",
+      "price": "120.000 VNĐ",
+      "quantity": 10,
+      "rate": 4,
+      "image": "/img/food-thumbnail/2.jpg",
+      "sale": 25
+    },
+    {
+      "id": 3,
+      "name": "Catsrang 5kg",
+      "price": "400.000 VNĐ",
+      "quantity": 10,
+      "rate": 3.9,
+      "image": "/img/food-thumbnail/3.jpg",
+      "sale": 15
+    },
+    {
+      "id": 4,
+      "name": "Me-O Adult Cá ngừ 1.2kg",
+      "price": "120.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.1,
+      "image": "/img/food-thumbnail/4.jpg",
+      "sale": 67
+    },
+    {
+      "id": 5,
+      "name": "Me-O Adult Hải sản 1.2kg",
+      "price": "120.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.2,
+      "image": "/img/food-thumbnail/5.jpg",
+      "sale": 69
+    },
+    {
+      "id": 6,
+      "name": "Me-O Adult Cá thu 1.2kg",
+      "price": "120.000 VNĐ",
+      "quantity": 10,
+      "rate": 4,
+      "image": "/img/food-thumbnail/6.jpg",
+      "sale": 46
+    },
+    {
+      "id": 7,
+      "name": "Royal Canin 2kg",
+      "price": "500.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.7,
+      "image": "/img/food-thumbnail/7.jpg",
+      "sale": 94
+    },
+    {
+      "id": 8,
+      "name": "Royal Canin kitten 2kg",
+      "price": "500.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.7,
+      "image": "/img/food-thumbnail/8.jpg",
+      "sale": 94
+    },
+    {
+      "id": 9,
+      "name": "Whiskas Adult Cá thu 1.2kg",
+      "price": "115.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.2,
+      "image": "/img/food-thumbnail/9.jpg",
+      "sale": 56
+    },
+    {
+      "id": 10,
+      "name": "Zenith Cat 1.2kg",
+      "price": "220.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.1,
+      "image": "/img/food-thumbnail/10.jpg",
+      "sale": 44
+    }
+  ],
+  "accessories": [
+    {
+      "id": 1,
+      "name": "Bát gắn chuồng inox",
+      "price": "80.000 VNĐ",
+      "quantity": 10,
+      "rate": 4,
+      "image": "/img/accessories-thumbnail/1.jpg",
+      "sale": 58
+    },
+    {
+      "id": 2,
+      "name": "Bát ốc sên đơn lõi inox",
+      "price": "60.000 VNĐ",
+      "quantity": 10,
+      "rate": 4,
+      "image": "/img/accessories-thumbnail/2.jpg",
+      "sale": 25
+    },
+    {
+      "id": 3,
+      "name": "Găng tay cào lông",
+      "price": "50.000 VNĐ",
+      "quantity": 10,
+      "rate": 3.9,
+      "image": "/img/accessories-thumbnail/3.jpg",
+      "sale": 15
+    },
+    {
+      "id": 4,
+      "name": "Bộ giáng sinh",
+      "price": "80.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.1,
+      "image": "/img/accessories-thumbnail/4.jpg",
+      "sale": 67
+    },
+    {
+      "id": 5,
+      "name": "Cần câu mèo",
+      "price": "50.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.2,
+      "image": "/img/accessories-thumbnail/5.jpg",
+      "sale": 69
+    },
+    {
+      "id": 6,
+      "name": "Chuột cào móng",
+      "price": "110.000 VNĐ",
+      "quantity": 10,
+      "rate": 4,
+      "image": "/img/accessories-thumbnail/6.jpg",
+      "sale": 46
+    },
+    {
+      "id": 7,
+      "name": "Vương miện công chúa",
+      "price": "50.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.7,
+      "image": "/img/accessories-thumbnail/7.jpg",
+      "sale": 94
+    },
+    {
+      "id": 8,
+      "name": "Cát vệ sinh Yuki 15l",
+      "price": "115.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.2,
+      "image": "/img/accessories-thumbnail/8.jpg",
+      "sale": 56
+    },
+    {
+      "id": 9,
+      "name": "Cát vệ sinh Yuki",
+      "price": "60.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.1,
+      "image": "/img/accessories-thumbnail/9.jpg",
+      "sale": 44
+    },
+    {
+      "id": 10,
+      "name": "Đệm bông Doraemon",
+      "price": "310.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.1,
+      "image": "/img/accessories-thumbnail/10.jpg",
+      "sale": 44
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "Munchkin Xanh Xám",
+      "price": "19.700.000",
+      "quantity": 4,
+      "rate": 4.3,
+      "image": "/img/cat-thumbnail/8.jpg",
+      "sale": 5
+    },
+    {
+      "id": 2,
+      "name": "Me-O Adult Hải sản 1.2kg",
+      "price": "120.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.2,
+      "image": "/img/food-thumbnail/5.jpg",
+      "sale": 69
+    },
+    {
+      "id": 3,
+      "name": "Zenith Cat 1.2kg",
+      "price": "220.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.1,
+      "image": "/img/food-thumbnail/10.jpg",
+      "sale": 44
+    },
+    {
+      "id": 4,
+      "name": "Whiskas Adult Cá thu 1.2kg",
+      "price": "115.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.2,
+      "image": "/img/food-thumbnail/9.jpg",
+      "sale": 56
+    },
+    {
+      "id": 5,
+      "name": "Cần câu mèo",
+      "price": "50.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.2,
+      "image": "/img/accessories-thumbnail/5.jpg",
+      "sale": 69
+    },
+    {
+      "id": 6,
+      "name": "Mèo Anh lông ngắn Tabi",
+      "price": "16.200.000",
+      "quantity": 2,
+      "rate": 4.8,
+      "image": "/img/cat-thumbnail/6.jpg",
+      "sale": 1
+    },
+    {
+      "id": 7,
+      "name": "Vương miện công chúa",
+      "price": "50.000 VNĐ",
+      "quantity": 10,
+      "rate": 4.7,
+      "image": "/img/accessories-thumbnail/7.jpg",
+      "sale": 94
+    }
+  ]
+}

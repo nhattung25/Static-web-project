@@ -13,7 +13,6 @@ body {
   margin-right: auto;
   font-family: "Roboto";
   color: #223444;
-  
 }
 
 button {
@@ -27,6 +26,13 @@ a {
 }
 
 /* Navigation bar */
+.nav-container {
+  position: fixed;
+  z-index: 999;
+  background-color: white;
+  width: 100%;
+  top: 0;
+}
 .navbar {
   height: 80px;
   --bs-navbar-padding-y: none;
@@ -87,6 +93,9 @@ a {
 }
 
 /* Sign-up css */
+.main-content {
+  margin-top: 80px;
+}
 .sign-up-button {
   display: none;
   margin-left: -70px;
