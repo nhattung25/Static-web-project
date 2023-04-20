@@ -216,14 +216,6 @@
 .health-post {
   margin-top: 50px;
 }
-.health-post-title {
-  height: 60px;
-  font-weight: 600;
-  font-size: 26px;
-  color: #223444;
-  margin-bottom: 10px;
-  border-bottom: solid 2px rgba(88, 106, 121, 0.301);
-}
 
 .post-card {
   border: 1px solid rgba(169, 172, 175, 0.3);
