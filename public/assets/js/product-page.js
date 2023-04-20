@@ -13,7 +13,8 @@ async function getProductsPage() {
     productItem = resProductItem.data;
 
     // Render ra ngoài giao diện
-    // renderProducts(productItem);
+    renderProducts(productItem);
+    // searchProductFunc();
   } catch (error) {
     console.log(error);
   }
@@ -72,24 +73,34 @@ function renderProducts(arr) {
 
 // Search sản phẩm theo tên
 let productSearch = document.querySelector(".product-search-input");
-let productCards = document.querySelectorAll(".item-card");
+let productSearchBtn = document.querySelector(".product-search");
 let clearBtn = document.querySelector(".clear");
 let value = productSearch.value;
 
 async function searchProductFunc() {
   //Dùng async-await để đợi render ra list sản phẩm
-  await getProductsPage();
-
+  await renderProducts(arr);
+  let productCards = document.querySelectorAll(".item-card");
   productSearch.addEventListener("keyup", function () {
     Array.from(productCards).forEach((product) => {
-      let value = productSearch.value;
+      let value = this.value;
       let productTitle = product.querySelector(".card-name").innerText;
-      if (productTitle.toLowerCase().includes(value.toLowerCase())) {
-        product.style.display = "block";
-      } else {
-        product.style.display = "none";
-      }
+      // console.log(product);
+      productSearchBtn.addEventListener("click", function () {
+        console.log("a");
+        if (productTitle.toLowerCase().includes(value.toLowerCase())) {
+          product.style.display = "block";
+          // console.log("hiện");
+          // console.log(product);
+          // console.log("hiện" + product);
+        } else {
+          product.style.display = "none";
+          // console.log("ẩn");
+          // console.log(product);
+        }
+      });
     });
+
     function clearFunc() {
       if (productSearch.value != "") {
         clearBtn.style.display = "block";
