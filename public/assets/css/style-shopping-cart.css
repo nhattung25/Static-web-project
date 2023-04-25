@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200");
+
 body {
   background-color: #f5f5f5;
 }
@@ -5,6 +7,71 @@ body {
 .main-content {
   margin-bottom: 100px;
 }
+.alert-container {
+  display: flex;
+  justify-content: center;
+}
+.shoping-cart-alert {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80px;
+  text-align: center;
+  font-size: 18px;
+  background-color: white;
+  width: 400px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  --borderWidth: 2px;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.shoping-cart-alert a {
+  color: #1777e8;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.shoping-cart-alert:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #a166ab,
+    #5073b8,
+    #1777e8,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.shoping-cart-alert span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1777e8;
+}
+
 .row.title {
   margin: unset;
   padding: unset;
@@ -155,14 +222,18 @@ input:focus {
 
 .sub-total,
 .discount-price,
-.grand-total {
+.total,
+.tax {
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
 }
 
 .sub-total span,
 .discount-price span,
-.grand-total span {
+.total span,
+.tax span {
+  font-size: 15px;
   color: #1777e8;
   font-weight: 600;
 }
@@ -170,9 +241,17 @@ input:focus {
 .sub-total {
   margin-bottom: 20px;
 }
-.discount-price {
+.discount-label {
+  display: flex;
+}
+.percent {
+  color: #1777e8;
+  font-weight: 600;
+}
+.tax {
   padding-bottom: 30px;
   margin-bottom: 20px;
+  margin-top: 20px;
   border-bottom: solid 1px #1777e8;
 }
 
@@ -184,7 +263,7 @@ input:focus {
   color: white;
   padding: 5px;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .product-back {
@@ -198,5 +277,5 @@ input:focus {
 .right {
   position: -webkit-sticky;
   position: sticky;
-  top: 120px;
+  top: 100px;
 }

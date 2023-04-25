@@ -45,6 +45,9 @@
 .para-2 {
   color: white;
   background: #1d9bf0;
+  background: linear-gradient(-45deg, #85bcde, #1777e8, #30d0d6);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
 }
 .text li {
   list-style-type: circle;

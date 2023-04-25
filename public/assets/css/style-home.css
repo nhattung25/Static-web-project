@@ -641,7 +641,7 @@ section {
   border-radius: 0px 25px 25px 0px;
 }
 ::placeholder {
-  color: #1777e8;
+  color: white;
   font-weight: 600;
 }
 
