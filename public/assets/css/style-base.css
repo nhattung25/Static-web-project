@@ -20,6 +20,10 @@ button {
   background-color: unset;
   cursor: pointer;
 }
+.active-btn {
+  background-color: #1777e8 !important;
+}
+
 a {
   text-decoration: none;
   color: unset;

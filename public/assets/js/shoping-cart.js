@@ -50,7 +50,6 @@ let voucher = {
 const cartItemList = document.querySelector(".cart-item-list");
 const cartAlert = document.querySelector(".shoping-cart-alert");
 const cartQty = document.querySelector(".shoping-cart-alert span");
-const addItem = document.querySelector(".add");
 const subTotal = document.querySelector(".sub-total span");
 const tax = document.querySelector(".tax span");
 const discountPrice = document.querySelector(".discount-price span");
@@ -107,7 +106,8 @@ function addButton(id) {
 // Minus button
 function minusButton(id) {
   for (let i = 0; i < cart.length; i++) {
-    if (cart[i].id == id && cart[i].count) {
+    if (cart[i].id == id && cart[i].count > 1) {
+      // minusBtn.classList.add("minusBtn-active");
       cart[i].count -= 1;
     }
   }
@@ -121,15 +121,17 @@ let inputPromotion = document.querySelector(".promo-code");
 inputPromotion.addEventListener("keyup", checkCode);
 
 function checkCode() {
-  if (inputPromotion.val != "") {
-    btnPromotion.createAttribute("class");
-
-    console.log(" Có mã");
+  if (inputPromotion.value != "") {
+    btnPromotion.classList.add("active-btn");
+  } else {
+    updateTotalMoney(cart);
+    btnPromotion.classList.remove("active-btn");
   }
 }
 
 function checkPromotion() {
-  let value = inputPromotion.value;
+  let value = inputPromotion.value; 
+
   if (voucher[value]) {
     return voucher[value];
   }
@@ -153,9 +155,7 @@ function updateTotalMoney(arr) {
 
   if (data) {
     discountMoney = (totalMoney * data) / 100;
-    console.log("có mã");
-  } else {
-    console.log("ko mã");
+    // console.log("có mã");
   }
 
   // Cập nhật tiền lên trên giao diện
@@ -168,6 +168,9 @@ function updateTotalMoney(arr) {
 }
 
 btnPromotion.addEventListener("click", function () {
+  if (!checkPromotion()) {
+    alert("Bạn nhập sai mã giảm giá");
+  }
   updateTotalMoney(cart);
 });
 
@@ -216,12 +219,12 @@ function renderShopingCart(arr) {
                   >
                     <div class="item-price">${t.price}</div>
                     <div class="qty-form">
-                      <button class="add" onclick="minusButton(${t.id})">
+                      <button onclick="minusButton(${t.id})">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="30"
                           height="30"
-                          fill="currentColor"
+                          fill="#1777e8"
                           class="bi bi-dash-square-fill"
                           viewBox="0 0 16 16"
                         >
@@ -236,7 +239,7 @@ function renderShopingCart(arr) {
                           xmlns="http://www.w3.org/2000/svg"
                           width="30"
                           height="30"
-                          fill="currentColor"
+                          fill="#1777e8"
                           class="bi bi-plus-square-fill"
                           viewBox="0 0 16 16"
                         >
@@ -272,6 +275,7 @@ function renderShopingCart(arr) {
       cartItemList.innerHTML = htmlCode;
     }
   }
+
   cartQty.innerText = `${updateTotalItem(arr)}`;
   updateTotalMoney(arr);
 }
