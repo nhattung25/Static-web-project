@@ -130,7 +130,7 @@ function checkCode() {
 }
 
 function checkPromotion() {
-  let value = inputPromotion.value; 
+  let value = inputPromotion.value;
 
   if (voucher[value]) {
     return voucher[value];
@@ -204,26 +204,30 @@ function renderShopingCart(arr) {
                   <div
                     class="col-12 col-lg-5 d-flex justify-content-center item-left"
                   >
+                  
                     <div class="cart-thumbnai">
                       <img src="${t.image}" alt="" />
                     </div>
                     <div class="item-info">
+                    <a href="./detail-product.html">
                       <div class="item-name">${t.name}</div>
+                      </a>
                       <div class="item-des">
                         Mèo Anh lông ngắn Silver xuất sứ Thái Lan.
                       </div>
                     </div>
+                    
                   </div>
                   <div
                     class="col-12 col-lg-7 d-flex justify-content-center item-qty"
                   >
-                    <div class="item-price">${t.price}</div>
+                    <div class="item-price">${convertMoney(t.price)}</div>
                     <div class="qty-form">
                       <button onclick="minusButton(${t.id})">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width="30"
-                          height="30"
+                          width="25"
+                          height="25"
                           fill="#1777e8"
                           class="bi bi-dash-square-fill"
                           viewBox="0 0 16 16"
@@ -233,12 +237,14 @@ function renderShopingCart(arr) {
                           ></path>
                         </svg>
                       </button>
-                      <input type="text" step="1" value="${t.count}" onchange="changeTotalItem(${t.id}, event)" />
+                      <input type="text" step="1" value="${
+                        t.count
+                      }" onchange="changeTotalItem(${t.id}, event)" />
                       <button onclick="addButton(${t.id})">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width="30"
-                          height="30"
+                          width="25"
+                          height="25"
                           fill="#1777e8"
                           class="bi bi-plus-square-fill"
                           viewBox="0 0 16 16"
@@ -249,7 +255,9 @@ function renderShopingCart(arr) {
                         </svg>
                       </button>
                     </div>
-                    <div class="item-price">15.000.000 đ</div>
+                    <div class="item-price">${convertMoney(
+                      t.price * t.count
+                    )}</div>
                   </div>
                 </div>
                 <div class="row">

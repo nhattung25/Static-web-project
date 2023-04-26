@@ -28,7 +28,7 @@
   border-radius: 5px;
 }
 .product-name {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -36,7 +36,6 @@
   /* max-height: 350px; */
   border-radius: 5px;
 }
-
 
 .nav-tabs {
   margin-top: 30px;
@@ -73,8 +72,8 @@
   margin-bottom: 10px;
 }
 .product-qty input {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border: 1px solid #84aede;
   border-radius: 2px;
 }
@@ -88,6 +87,9 @@ input {
 }
 .product-qty {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 .product-qty button {
   font-weight: 600;
@@ -103,4 +105,29 @@ input {
 }
 .card-meta {
   padding-bottom: 15px;
+}
+
+.promotion-code {
+  box-shadow: 0 3px 5px #719ecea2;
+  margin-left: 60px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.promo-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.promo-item {
+  margin-bottom: 10px;
+  padding: 5px 0 5px 15px;
+  border-radius: 17px;
+  color: white;
+  background: linear-gradient(-45deg, #85bcde, #1777e8, #30d6af);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+.promo-item span {
+  font-weight: 600;
 }
