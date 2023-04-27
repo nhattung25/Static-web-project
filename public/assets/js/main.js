@@ -48,7 +48,7 @@ sign_up_btn.addEventListener("click", function () {
 //         <div class="sign-up-label">Nhập lại mật khẩu</div>
 //         <input class="input sign-up" type="password" />
 //       </div>
-//         <input class="submit-btn" type="submit" value="Tiếp" /> 
+//         <input class="submit-btn" type="submit" value="Tiếp" />
 //     </div>`;
 // }
 sign_up_crt.addEventListener("click", function () {
@@ -162,3 +162,5 @@ const cat_dropdown = document.querySelector(".cat-dropdown");
 filter_cat.addEventListener("click", function () {
   cat_dropdown.style.display = "block";
 });
+
+

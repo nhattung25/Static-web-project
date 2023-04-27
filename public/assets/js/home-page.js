@@ -189,10 +189,11 @@ function renderUI(arr, renderEle, type, qty) {
     case 0:
       for (let i = 0; i < qty; i++) {
         const t = arr[i];
+        // console.log(t);
         if (t.type == type) {
           htmlCode += `
          <div class="col-12 col-sm-6 col-md-3">
-         <a href="./detail-product.html">
+         <a href="./detail-product.html?id=${t.id}">
                 <div class="item-card">
                   <div class="item-content">
                     <div class="card-thumbnail">
@@ -243,7 +244,7 @@ function renderUI(arr, renderEle, type, qty) {
         if (t.type == type) {
           htmlCode += `
          <div class="col-12 col-sm-6 col-md-3">
-         <a href="./detail-product.html">
+         <a href="./detail-product.html?id=${t.id}">
                 <div class="item-card">
                   <div class="item-content">
                     <div class="card-thumbnail">
@@ -292,7 +293,7 @@ function renderUI(arr, renderEle, type, qty) {
         if (t.type == type) {
           htmlCode += `
          <div class="col-12 col-sm-6 col-md-3">
-         <a href="./detail-product.html">
+         <a href="./detail-product.html?id=${t.id}">
                 <div class="item-card">
                   <div class="item-content">
                     <div class="card-thumbnail">

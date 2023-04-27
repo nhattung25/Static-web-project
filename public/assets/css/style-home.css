@@ -259,6 +259,7 @@ section {
 }
 .card-thumbnail img {
   max-height: 250px !important;
+  object-fit: cover;
 }
 
 .card-name {
@@ -448,6 +449,9 @@ section {
   height: 180px;
   border-radius: 8px 8px 0 0;
   overflow: hidden;
+}
+.sale-off-thumbnail img {
+  object-fit: cover;
 }
 .sale-off-tag {
   position: absolute;

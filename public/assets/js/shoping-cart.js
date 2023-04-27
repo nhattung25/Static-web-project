@@ -209,7 +209,7 @@ function renderShopingCart(arr) {
                       <img src="${t.image}" alt="" />
                     </div>
                     <div class="item-info">
-                    <a href="./detail-product.html">
+                    <a href="./detail-product.html?id=${t.id}">
                       <div class="item-name">${t.name}</div>
                       </a>
                       <div class="item-des">

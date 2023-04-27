@@ -22,14 +22,14 @@ async function getProductsPage() {
 
 const productList = document.querySelector(".product-list .row");
 
-// // Render UI - Hiển thị danh sách card ra ngoài giao diện
+// Render UI - Hiển thị danh sách card ra ngoài giao diện
 function renderProducts(arr) {
   let htmlCode = ``;
   for (let i = 0; i < arr.length; i++) {
     const t = arr[i];
     htmlCode += `
          <div class="col-12 col-sm-12 col-md-4 my-2">
-         <a href="./detail-product.html">
+         <a  href="./detail-product.html?id=${t.id}">
                 <div class="item-card">
                   <div class="item-content">
                     <div class="card-thumbnail">
@@ -72,55 +72,61 @@ function renderProducts(arr) {
 }
 
 // Search sản phẩm theo tên
-let productSearch = document.querySelector(".product-search-input");
-let productSearchBtn = document.querySelector(".product-search");
-let clearBtn = document.querySelector(".clear");
-let value = productSearch.value;
+// let productSearch = document.querySelector(".product-search-input");
+// let productSearchBtn = document.querySelector(".product-search");
+// let clearBtn = document.querySelector(".clear");
+// let value = productSearch.value;
 
-async function searchProductFunc() {
-  //Dùng async-await để đợi render ra list sản phẩm
-  await renderProducts(arr);
-  let productCards = document.querySelectorAll(".item-card");
-  productSearch.addEventListener("keyup", function () {
-    Array.from(productCards).forEach((product) => {
-      let value = this.value;
-      let productTitle = product.querySelector(".card-name").innerText;
-      // console.log(product);
-      productSearchBtn.addEventListener("click", function () {
-        console.log("a");
-        if (productTitle.toLowerCase().includes(value.toLowerCase())) {
-          product.style.display = "block";
-          // console.log("hiện");
-          // console.log(product);
-          // console.log("hiện" + product);
-        } else {
-          product.style.display = "none";
-          // console.log("ẩn");
-          // console.log(product);
-        }
-      });
-    });
+// function searchProductFunc() {
+//   //Dùng async-await để đợi render ra list sản phẩm
+//    renderProducts(arr);
+//   let productCards = document.querySelectorAll(".item-card");
+//   productSearch.addEventListener("keyup", function () {
+//     Array.from(productCards).forEach((product) => {
+//       let value = this.value;
+//       let productTitle = product.querySelector(".card-name").innerText;
+//       // console.log(product);
+//       productSearchBtn.addEventListener("click", function () {
+//         console.log("a");
+//         if (productTitle.toLowerCase().includes(value.toLowerCase())) {
+//           product.style.display = "block";
+//           // console.log("hiện");
+//           // console.log(product);
+//           // console.log("hiện" + product);
+//         } else {
+//           product.style.display = "none";
+//           // console.log("ẩn");
+//           // console.log(product);
+//         }
+//       });
+//     });
 
-    function clearFunc() {
-      if (productSearch.value != "") {
-        clearBtn.style.display = "block";
-      } else {
-        clearBtn.style.display = "none";
-      }
-      clearBtn.addEventListener("click", function () {
-        productSearch.value = "";
-        // Ẩn nút clear khi ô tìm kiếm trống
-        clearBtn.style.display = "none";
-        // Hiển thị lại product list khi ô tìm kiếm trống
-        Array.from(productCards).forEach((product) => {
-          product.style.display = "block";
-        });
-      });
-    }
-    clearFunc();
-  });
-}
-searchProductFunc();
+//     function clearFunc() {
+//       if (productSearch.value != "") {
+//         clearBtn.style.display = "block";
+//       } else {
+//         clearBtn.style.display = "none";
+//       }
+//       clearBtn.addEventListener("click", function () {
+//         productSearch.value = "";
+//         // Ẩn nút clear khi ô tìm kiếm trống
+//         clearBtn.style.display = "none";
+//         // Hiển thị lại product list khi ô tìm kiếm trống
+//         Array.from(productCards).forEach((product) => {
+//           product.style.display = "block";
+//         });
+//       });
+//     }
+//     clearFunc();
+//   });
+// }
+// searchProductFunc();
+
+// let url = window.location.href;
+// console.log(url);
+// var searchParams = new URLSearchParams(paramsString);
+// searchParams.get("place"); // quan-net
+// searchParams.getAll("place"); // ["quan-net", "rung"]
 
 window.onload = () => {
   getProductsPage();

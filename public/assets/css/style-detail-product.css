@@ -122,8 +122,8 @@ input {
   margin-bottom: 10px;
   padding: 5px 0 5px 15px;
   border-radius: 17px;
-  color: white;
-  background: linear-gradient(-45deg, #85bcde, #1777e8, #30d6af);
+  /* color: white; */
+  background: linear-gradient(-45deg, #f12711, #f5af19, #f5af19, #f12711);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
 }
