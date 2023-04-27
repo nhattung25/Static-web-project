@@ -1,51 +1,103 @@
-let cart = [
-  {
-    id: 1,
-    name: "Mèo Anh lông ngắn Silver",
-    price: 15000000,
-    quantity: 10,
-    rate: 4,
-    image: "/img/cat-thumbnail/1.jpg",
-    sale: 8,
-    count: 1,
-  },
-  {
-    id: 2,
-    name: "Maxim Cá hồi 400g",
-    price: 40000,
-    quantity: 10,
-    rate: 4,
-    image: "/img/food-thumbnail/1.jpg",
-    sale: 58,
-    count: 1,
-  },
-  {
-    id: 3,
-    name: "Bát gắn chuồng inox",
-    price: 80000,
-    quantity: 10,
-    rate: 4,
-    image: "/img/accessories-thumbnail/1.jpg",
-    sale: 58,
-    count: 1,
-  },
-  {
-    id: 4,
-    name: "Găng tay cào lông",
-    price: 50000,
-    quantity: 10,
-    rate: 3.9,
-    image: "/img/accessories-thumbnail/3.jpg",
-    sale: 15,
-    count: 1,
-  },
-];
+// let cart = [
+//   {
+//     type: 0,
+//     id: 1,
+//     name: "Mèo Anh lông ngắn Silver",
+//     price: 15000000,
+//     des: "Mèo Anh lông ngắn Silver xuất sứ Thái Lan. Đã tiêm phòng và có chứng từ đầy đủ",
+//     quantity: 10,
+//     rate: 4,
+//     image: "/img/cat-thumbnail/1.jpg",
+//     about:
+//       "Mèo Anh lông ngắn là giống mèo dễ chăm sóc. Chúng không có vấn đề sức khỏe bẩm sinh, không có yêu cầu chế độ ăn uống đặc biệt và là vật nuôi vui vẻ, hòa đồng. Chúng khỏe mạnh, thông minh, tình cảm và là những con mèo nhà lý tưởng.Mèo Anh lông ngắn trưởng thành thường nặng từ 11 – 15 pound đối với con đực và 8 – 12 pound đối với con cái. Sẽ không mất nhiều thời gian để giữ cho mèo hoặc mèo con của bạn hạnh phúc – rất nhiều tình yêu thương, thức ăn ngon, nước sạch, môi trường an toàn và chăm sóc sức khỏe tốt.",
+//     warranty:
+//       "Trả góp LS 0% trong 12 tháng (Chi tiết) Bảo hành lên tới 365 ngày. Bảo hiểm sức khỏe lên tới 1,000,000đ Miễn phí vận chuyển toàn quốc (Chi tiết) Giảm 500,000đ khi mua bé thứ 2. Giảm trọn đời 5% khi mua phụ kiện. Giảm trọn đời 20% Spa cắt tỉa – Áp dụng với KH khu vực Hà Nội.",
+//     sale: 8,
+//     count: 1,
+//   },
+//   {
+//     type: 1,
+//     id: 11,
+//     name: "Maxim Cá hồi 400g",
+//     price: 40000,
+//     des: "Mèo Anh lông ngắn Silver xuất sứ Thái Lan. Đã tiêm phòng và có chứng từ đầy đủ",
+//     quantity: 10,
+//     rate: 4,
+//     image: "/img/food-thumbnail/1.jpg",
+//     about:
+//       "Mèo Anh lông ngắn là giống mèo dễ chăm sóc. Chúng không có vấn đề sức khỏe bẩm sinh, không có yêu cầu chế độ ăn uống đặc biệt và là vật nuôi vui vẻ, hòa đồng. Chúng khỏe mạnh, thông minh, tình cảm và là những con mèo nhà lý tưởng.Mèo Anh lông ngắn trưởng thành thường nặng từ 11 – 15 pound đối với con đực và 8 – 12 pound đối với con cái. Sẽ không mất nhiều thời gian để giữ cho mèo hoặc mèo con của bạn hạnh phúc – rất nhiều tình yêu thương, thức ăn ngon, nước sạch, môi trường an toàn và chăm sóc sức khỏe tốt.",
+//     warranty:
+//       "Trả góp LS 0% trong 12 tháng (Chi tiết) Bảo hành lên tới 365 ngày. Bảo hiểm sức khỏe lên tới 1,000,000đ Miễn phí vận chuyển toàn quốc (Chi tiết) Giảm 500,000đ khi mua bé thứ 2. Giảm trọn đời 5% khi mua phụ kiện. Giảm trọn đời 20% Spa cắt tỉa – Áp dụng với KH khu vực Hà Nội.",
+//     sale: 58,
+//     count: 1,
+//   },
+//   {
+//     type: 2,
+//     id: 21,
+//     name: "Bát gắn chuồng inox",
+//     price: 80000,
+//     des: "Mèo Anh lông ngắn Silver xuất sứ Thái Lan. Đã tiêm phòng và có chứng từ đầy đủ",
+//     quantity: 10,
+//     rate: 4,
+//     image: "/img/accessories-thumbnail/1.jpg",
+//     about:
+//       "Mèo Anh lông ngắn là giống mèo dễ chăm sóc. Chúng không có vấn đề sức khỏe bẩm sinh, không có yêu cầu chế độ ăn uống đặc biệt và là vật nuôi vui vẻ, hòa đồng. Chúng khỏe mạnh, thông minh, tình cảm và là những con mèo nhà lý tưởng.Mèo Anh lông ngắn trưởng thành thường nặng từ 11 – 15 pound đối với con đực và 8 – 12 pound đối với con cái. Sẽ không mất nhiều thời gian để giữ cho mèo hoặc mèo con của bạn hạnh phúc – rất nhiều tình yêu thương, thức ăn ngon, nước sạch, môi trường an toàn và chăm sóc sức khỏe tốt.",
+//     warranty:
+//       "Trả góp LS 0% trong 12 tháng (Chi tiết) Bảo hành lên tới 365 ngày. Bảo hiểm sức khỏe lên tới 1,000,000đ Miễn phí vận chuyển toàn quốc (Chi tiết) Giảm 500,000đ khi mua bé thứ 2. Giảm trọn đời 5% khi mua phụ kiện. Giảm trọn đời 20% Spa cắt tỉa – Áp dụng với KH khu vực Hà Nội.",
+//     sale: 58,
+//     count: 1,
+//   },
+//   {
+//     type: 2,
+//     id: 23,
+//     name: "Găng tay cào lông",
+//     price: 50000,
+//     des: "Mèo Anh lông ngắn Silver xuất sứ Thái Lan. Đã tiêm phòng và có chứng từ đầy đủ",
+//     quantity: 10,
+//     rate: 3.9,
+//     image: "/img/accessories-thumbnail/3.jpg",
+//     about:
+//       "Mèo Anh lông ngắn là giống mèo dễ chăm sóc. Chúng không có vấn đề sức khỏe bẩm sinh, không có yêu cầu chế độ ăn uống đặc biệt và là vật nuôi vui vẻ, hòa đồng. Chúng khỏe mạnh, thông minh, tình cảm và là những con mèo nhà lý tưởng.Mèo Anh lông ngắn trưởng thành thường nặng từ 11 – 15 pound đối với con đực và 8 – 12 pound đối với con cái. Sẽ không mất nhiều thời gian để giữ cho mèo hoặc mèo con của bạn hạnh phúc – rất nhiều tình yêu thương, thức ăn ngon, nước sạch, môi trường an toàn và chăm sóc sức khỏe tốt.",
+//     warranty:
+//       "Trả góp LS 0% trong 12 tháng (Chi tiết) Bảo hành lên tới 365 ngày. Bảo hiểm sức khỏe lên tới 1,000,000đ Miễn phí vận chuyển toàn quốc (Chi tiết) Giảm 500,000đ khi mua bé thứ 2. Giảm trọn đời 5% khi mua phụ kiện. Giảm trọn đời 20% Spa cắt tỉa – Áp dụng với KH khu vực Hà Nội.",
+//     sale: 15,
+//     count: 1,
+//   },
+// ];
 
-let voucher = {
-  CATPAW10: 10,
-  CATPAW20: 20,
-  CATPAW30: 30,
-};
+// let voucher = {
+//   CATPAW10: 10,
+//   CATPAW20: 20,
+//   CATPAW30: 30,
+// };
+
+// Lấy URL của trang
+
+// // Khai báo biến
+let cartItem = [];
+
+// API for getting CartItem list
+function getCartAPI() {
+  return axios.get("/cart"); // => luôn trả về promise
+}
+// API for getting Voucher list
+function getVoucherAPI() {
+  return axios.get("/voucher"); // => luôn trả về promise
+}
+
+// Getting the Cats list
+async function getCartItem() {
+  try {
+    const resCartItem = await getCartAPI();
+    cartItem = resCartItem.data;
+    const resVoucher = await getVoucherAPI();
+    voucher = resVoucher.data;
+    // Render ra ngoài giao diện
+    renderShopingCart(cartItem);
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 const cartItemList = document.querySelector(".cart-item-list");
 const cartAlert = document.querySelector(".shoping-cart-alert");
@@ -74,45 +126,44 @@ function updateTotalItem(arr) {
 
 // Remove item trong cart
 function removeItem(id) {
-  for (let i = 0; i < cart.length; i++) {
-    if (cart[i].id == id) {
-      cart.splice(i, 1);
+  for (let i = 0; i < cartItem.length; i++) {
+    if (cartItem[i].id == id) {
+      cartItem.splice(i, 1);
     }
   }
-  renderShopingCart(cart);
+  renderShopingCart(cartItem);
 }
 
 // Thêm sản phẩm
 function changeTotalItem(id, e) {
-  for (let i = 0; i < cart.length; i++) {
-    if (cart[i].id == id) {
-      cart[i].count = Number(e.target.value);
+  for (let i = 0; i < cartItem.length; i++) {
+    if (cartItem[i].id == id) {
+      cartItem[i].count = Number(e.target.value);
     }
   }
-  renderShopingCart(cart);
+  renderShopingCart(cartItem);
 }
 
 // Add button
 function addButton(id) {
-  for (let i = 0; i < cart.length; i++) {
-    if (cart[i].id == id) {
-      cart[i].count += 1;
+  for (let i = 0; i < cartItem.length; i++) {
+    if (cartItem[i].id == id) {
+      cartItem[i].count += 1;
     }
   }
 
-  renderShopingCart(cart);
+  renderShopingCart(cartItem);
 }
 
 // Minus button
 function minusButton(id) {
-  for (let i = 0; i < cart.length; i++) {
-    if (cart[i].id == id && cart[i].count > 1) {
-      // minusBtn.classList.add("minusBtn-active");
-      cart[i].count -= 1;
+  for (let i = 0; i < cartItem.length; i++) {
+    if (cartItem[i].id == id && cartItem[i].count > 1) {
+      cartItem[i].count -= 1;
     }
   }
 
-  renderShopingCart(cart);
+  renderShopingCart(cartItem);
 }
 
 // Kiểm tra mã giảm giá
@@ -124,14 +175,14 @@ function checkCode() {
   if (inputPromotion.value != "") {
     btnPromotion.classList.add("active-btn");
   } else {
-    updateTotalMoney(cart);
+    updateTotalMoney(cartItem);
     btnPromotion.classList.remove("active-btn");
   }
 }
 
 function checkPromotion() {
   let value = inputPromotion.value;
-
+  console.log(voucher[value]);
   if (voucher[value]) {
     return voucher[value];
   }
@@ -155,7 +206,6 @@ function updateTotalMoney(arr) {
 
   if (data) {
     discountMoney = (totalMoney * data) / 100;
-    // console.log("có mã");
   }
 
   // Cập nhật tiền lên trên giao diện
@@ -163,7 +213,6 @@ function updateTotalMoney(arr) {
   discountPrice.innerText = convertMoney(discountMoney);
   subTotal.innerText = convertMoney(totalMoney);
   tax.innerText = convertMoney(totalMoney * 0.08);
-  // console.log(totalMoney);
   totalPrice.innerText = convertMoney(totalMoney * 1.08 - discountMoney);
 }
 
@@ -171,7 +220,7 @@ btnPromotion.addEventListener("click", function () {
   if (!checkPromotion()) {
     alert("Bạn nhập sai mã giảm giá");
   }
-  updateTotalMoney(cart);
+  updateTotalMoney(cartItem);
 });
 
 // Render item trong cart
@@ -180,20 +229,20 @@ function renderShopingCart(arr) {
   let htmlCode = ``;
   if (arr.length == 0) {
     cartAlert.innerHTML = `Không có sản phẩm trong giỏ hàng.
-<a href="./products.html"
-  ><svg
+   <a href="./products.html"
+   ><svg
     xmlns="http://www.w3.org/2000/svg"
     width="16"
     height="16"
     fill="currentColor"
     class="bi bi-arrow-return-left"
     viewBox="0 0 16 16"
-  >
+   >
     <path
       fill-rule="evenodd"
       d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"
     ></path></svg
-  >Quay lại trang sản phẩm</a
+   >Quay lại trang sản phẩm</a
 >`;
   } else {
     for (let i = 0; i < arr.length; i++) {
@@ -288,4 +337,6 @@ function renderShopingCart(arr) {
   updateTotalMoney(arr);
 }
 
-window.onload = renderShopingCart(cart);
+window.onload = () => {
+  getCartItem();
+};
