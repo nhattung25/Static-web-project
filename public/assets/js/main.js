@@ -19,12 +19,12 @@
 
 /**Sign-up button */
 
-const sign_up_btn = document.querySelector(".nav-item.sign-up");
-const sign_up = document.querySelector(".sign-up-button");
-const sign_up_close_btn = document.querySelector(".close-btn");
-const sign_up_alert = document.querySelector(".sign-up-alert");
-const sign_up_fb = document.querySelector(".sign-up-fnc.fb");
-const sign_up_crt = document.querySelector(".sign-up-fnc.crt");
+// const sign_up_btn = document.querySelector(".nav-item.sign-up");
+// const sign_up = document.querySelector(".sign-up-button");
+// const sign_up_close_btn = document.querySelector(".close-btn");
+// const sign_up_alert = document.querySelector(".sign-up-alert");
+// const sign_up_fb = document.querySelector(".sign-up-fnc.fb");
+// const sign_up_crt = document.querySelector(".sign-up-fnc.crt");
 
 // sign_up_btn.addEventListener("click", function () {
 //   sign_up.style.display = "block";
@@ -162,5 +162,3 @@ const cat_dropdown = document.querySelector(".cat-dropdown");
 filter_cat.addEventListener("click", function () {
   cat_dropdown.style.display = "block";
 });
-
-
