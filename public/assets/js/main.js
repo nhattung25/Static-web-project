@@ -26,9 +26,9 @@ const sign_up_alert = document.querySelector(".sign-up-alert");
 const sign_up_fb = document.querySelector(".sign-up-fnc.fb");
 const sign_up_crt = document.querySelector(".sign-up-fnc.crt");
 
-sign_up_btn.addEventListener("click", function () {
-  sign_up.style.display = "block";
-});
+// sign_up_btn.addEventListener("click", function () {
+//   sign_up.style.display = "block";
+// });
 
 // function handleClickbtn(e) {
 //   e.target.innerHTML = `<div class="back">
