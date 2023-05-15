@@ -1,21 +1,21 @@
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "vertical",
-  loop: false,
-  speed: 500,
-  slidesPerView: 3,
-  spaceBetween: 15,
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
+// const swiper = new Swiper(".swiper", {
+//   // Optional parameters
+//   direction: "vertical",
+//   loop: false,
+//   speed: 500,
+//   slidesPerView: 3,
+//   spaceBetween: 15,
+//   // If we need pagination
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".btn-next",
-    prevEl: ".btn-prev",
-  },
-});
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: ".btn-next",
+//     prevEl: ".btn-prev",
+//   },
+// });
 
 /**Sign-up button */
 
